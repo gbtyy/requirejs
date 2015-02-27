@@ -36,7 +36,7 @@
 
 <span class="note">Note: For jQuery-specific advice, see the <a href="jquery.html">jQuery integration page</a></span>
 
-<p>This setup assumes you keep all your JavaScript files in a "scripts" directory in your project. For example, if you have a project that has an project.html page, with some scripts, the directory layout might look like so:</p>
+<p>This setup assumes you keep all your JavaScript files in a "scripts" directory in your project. For example, if you have a project that has a project.html page, with some scripts, the directory layout might look like so:</p>
 
 <ul>
     <li>project-directory/
@@ -86,6 +86,8 @@
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+
+<p>You could also place the script tag end of the &lt;body&gt; section if you do not want the loading of the require.js script to block rendering. For browsers that support it, you could also add an <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/script#Attributes">async attribute</a> to the script tag.</p>
 
 <p>Inside of main.js, you can use require() to load any other scripts you need to run. This ensures a single entry point, since <a href="api.html#data-main">the data-main script you specify is loaded asynchronously</a>.</p>
 
